@@ -209,4 +209,4 @@ nnoremap Q çç
 ":set ff=unix
 ":set ff=dos
 "set ignorecase or set ic To re-enable case sensitivity, use :set ic!
-"--------------------------------
+"------------------------
