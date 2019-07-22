@@ -18,9 +18,11 @@ language message en_US.UTF-8
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
+"encoding and fonts
 colorscheme desert
 scriptencoding utf-8
 syntax on
+set guifont=Lucida_Console:h11:cANSI:qDRAFT
 
 "Undo file
 set directory=~/.tmp/
@@ -209,4 +211,13 @@ nnoremap Q çç
 ":set ff=unix
 ":set ff=dos
 "set ignorecase or set ic To re-enable case sensitivity, use :set ic!
+
+"To set the default font used by GVim, add a command of the form set guifont= to your gvimrc. If you want to add it to vimrc file, then enclose this command in a if has("gui_running") block.
+
+" This works on Windows, but is ineffective on Linux
+"set guifont="Ubuntu Mono 10"
+
+" This works on Linux
+"set guifont=Ubuntu\ Mono\ 10
+
 "------------------------
