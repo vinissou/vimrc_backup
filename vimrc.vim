@@ -167,7 +167,7 @@ nnoremap .a :<C-U>!~/a.out<CR>
 
 
 "MACROS (don't use numbers)
-let @i='GVgg<G' "indents the whole document left
+let @i='GVgg<G' "unindent the whole document one position to the left
 let @r='Iv/>h\y' "temporary 
 let @d='Av?>l\y' "temporary 
 
