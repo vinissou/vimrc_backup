@@ -167,9 +167,9 @@ nnoremap .a :<C-U>!~/a.out<CR>
 
 
 "MACROS (don't use numbers)
-let @c='i#include <stdio.h>int main(){return(0);}'
-let @i='GVgg<G'
-let @k='|'
+let @i='GVgg<G' "indents the whole document left
+let @r='Iv/>h\y' "temporary 
+let @d='Av?>l\y' "temporary 
 
 
 "Deactivated because they annoyed me
@@ -197,6 +197,13 @@ nnoremap Q çç
 "       TEMPORARY 
 "------------------------
 " temp
+
+"------------------------
+"       OLD MACROS
+"------------------------
+"let @c='i#include <stdio.h>int main(){return(0);}'
+"let @k='|'
+
 
 "------------------------
 "         TIPS
