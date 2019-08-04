@@ -1,3 +1,4 @@
+
 "------------------------
 "     CONFIGURATION
 "------------------------
@@ -127,9 +128,9 @@ nnoremap <leader>1 @k
 nnoremap <leader>2 <c-w>=
 nnoremap <leader>3 <c-w>_
 
-nnoremap <leader>se :setlocal spell spelllang=en_us
-nnoremap <leader>sb :setlocal spell spelllang=pt_br
-nnoremap <leader>sn :set nospell
+nnoremap <leader>se :setlocal spell spelllang=en_us
+nnoremap <leader>sb :setlocal spell spelllang=pt_br
+nnoremap <leader>sn :set nospell
 
 nnoremap <leader>* *<C-O>:%s///gn<CR>
 nnoremap <leader>/ :%s/ins//gn
@@ -140,11 +141,11 @@ nnoremap ' :ec
 nnoremap <leader>' I"A"
 nnoremap <leader>" IxAx
 
-noremap .' I/* A*/
-noremap ." IxxxAxx>
-nnoremap .i I/*
-nnoremap .f A*/
-nnoremap .l I* <<<
+noremap .' I/* A*/
+noremap ." IxxxAxx>
+nnoremap .i I/*
+nnoremap .f A*/
+nnoremap .l I* <<<
 nnoremap .h O/************************************************************ Name:** Function: ** Observations: ** Used functions and variables from other files:************************************************************/
 nnoremap .m o* Creator: Vinícius Souza* Email: vinissou.git@gmail.com* Site: https://github.com/vinissou
 
@@ -172,6 +173,7 @@ nnoremap .a :<C-U>!~/a.out<CR>
 let @i='GVgg<G' "unindent the whole document one position to the left
 let @r='Iv/>h\y' "temporary 
 let @d='Av?>l\y' "temporary 
+let time =strftime('%c')
 
 
 "Deactivated because they annoyed me
@@ -192,7 +194,7 @@ nnoremap Q çç
 "  COMMAND CODE REFERENCES 
 "---------------------------
 "Esc = 
-"Enter = 
+"Enter = 
 
 
 "------------------------
