@@ -171,9 +171,9 @@ nnoremap .a :<C-U>!~/a.out<CR>
 
 "MACROS (don't use numbers)
 let @i='GVgg<G' "unindent the whole document one position to the left
+let @t=':let time =strftime("%c")' "creates a current time variable
 let @r='Iv/>h\y' "temporary 
 let @d='Av?>l\y' "temporary 
-let time =strftime('%c')
 
 
 "Deactivated because they annoyed me
