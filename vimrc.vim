@@ -164,7 +164,7 @@ endif
 "Compilers
 if has("win32")
     nnoremap .c :<C-U>!clang -o3 -Wall -pedantic -std=c99 % -o CL_OUT.exe <CR>
-    nnoremap .cl :<C-U>!cl /O2 /TC /Wall /Analyse % <CR>
+    nnoremap .cl :<C-U>!cl /O2 /TC /Wall /analyze % <CR>
     nnoremap .gc :<C-U>!gcc  -o3 -Wall -pedantic -std=c99 % -o GCC_OUT.exe<CR>
 else
     nnoremap .c :<C-U>!clang -o3 -Wall -pedantic -std=c99 %:r.c -o ~/a.out<CR>
