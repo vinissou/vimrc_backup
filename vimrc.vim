@@ -1,9 +1,6 @@
-
 "------------------------
 "     CONFIGURATION
 "------------------------
-
-"Basic
 
 "Turn off audio and visual bells on gVim
 set noerrorbells visualbell t_vb=
@@ -11,14 +8,16 @@ if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
 
-"Put everything in english, or at least try
+
+"Set everything in english, or at least try to
 set langmenu=en_US.UTF-8 
 let $LANG = 'en_US.UTF-8'
 language message en_US.UTF-8
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
-"encoding and fonts
+
+"Encoding and fonts
 colorscheme desert
 scriptencoding utf-8
 syntax on
@@ -31,6 +30,7 @@ endif
 set directory=~/.tmp/
 set undofile
 let &undodir=&directory
+
 
 "Varied set configurations
 set ai
@@ -63,6 +63,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 
+
 "------------------------
 "   SHORTCUTS SECTION
 "------------------------
@@ -72,8 +73,6 @@ noremap <leader>o o
 noremap <leader>0 O
 noremap <leader><Space> i 
 noremap <leader> i
-
-noremap .j :'<,'>!fmt -w 80
 
 noremap > >>
 noremap < <<
@@ -86,7 +85,6 @@ noremap <leader>- :m--
 noremap <leader>y "+yy
 vnoremap <leader>y "+yy
 nnoremap <leader>p "+p
-
 noremap <leader>a GVgg
 
 
@@ -113,14 +111,15 @@ nnoremap ,a A
 nnoremap ,i I
 
 
-
 "Vim functions
 nnoremap ; :
 nnoremap <leader>m :e! $MYVIMRC<cr>
 nnoremap .\ .
 nnoremap . :
-
+nnoremap <leader>/ :%s/ins//gn
+nnoremap ' :ec 
 nnoremap .qq :bd!<cr>
+
 nnoremap <leader>]  :bn<cr>
 nnoremap <leader>[  :bp<cr>
 
@@ -132,15 +131,10 @@ nnoremap <leader>se :setlocal spell spelllang=en_us
 nnoremap <leader>sb :setlocal spell spelllang=pt_br
 nnoremap <leader>sn :set nospell
 
-nnoremap <leader>* *<C-O>:%s///gn<CR>
-nnoremap <leader>/ :%s/ins//gn
-
-nnoremap ' :ec 
 
 "Programming comments
 nnoremap <leader>' I"A"
 nnoremap <leader>" IxAx
-
 noremap .' I/* A*/
 noremap ." IxxxAxx>
 nnoremap .i I/*
@@ -161,6 +155,7 @@ else
     let @g=':!sh /home/vini/C/SCRIPTS/GIT_PULL_vimrc.sh|\m\ad:r /home/vini/GIT/vimrc_backup/vimrc.vim'
 endif
 
+
 "Compilers
 if has("win32")
     nnoremap .c :<C-U>!clang -o3 -Wall -pedantic -std=c99 % -o CL_OUT.exe <CR>
@@ -172,7 +167,6 @@ else
     nnoremap .va :<C-U>!valgrind ~/a.out<CR>
     nnoremap .a :<C-U>!~/a.out<CR>
 endif
-
 
 
 "MACROS (don't use numbers)
@@ -213,6 +207,7 @@ nnoremap Q çç
 "------------------------
 "let @c='i#include <stdio.h>int main(){return(0);}'
 "let @k='|'
+"noremap .j :'<,'>!fmt -w 80
 
 
 "------------------------
@@ -231,10 +226,5 @@ nnoremap Q çç
 
 "To set the default font used by GVim, add a command of the form set guifont= to your gvimrc. If you want to add it to vimrc file, then enclose this command in a if has("gui_running") block.
 
-" This works on Windows, but is ineffective on Linux
-"set guifont="Ubuntu Mono 10"
-
-" This works on Linux
-"set guifont=Ubuntu\ Mono\ 10
 
 "------------------------
