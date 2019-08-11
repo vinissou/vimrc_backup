@@ -169,11 +169,13 @@ else
 endif
 
 
-"MACROS (don't use numbers)
+"MACROS 
+" Tips: - Don't use numbers
+"       - Saving macros in your file can lead to weird glitches in
+"         unicode characters 
+
 let @i='GVgg<G' "unindent the whole document one position to the left
 let @t=':let time =strftime("%c")' "creates a current time variable
-let @r='Iv/>h\y' "temporary 
-let @d='Av?>l\y' "temporary 
 
 
 "Deactivated because they annoyed me
@@ -200,7 +202,11 @@ nnoremap Q Ã§Ã§
 "------------------------
 "       TEMPORARY 
 "------------------------
-" temp
+let @r='Iv/>h\y'  
+let @d='Av?>l\y'  
+let @m='\=-vexxA€kD >>> €kDA€kb'
+let @n='/>\w\\--\=\=--A€kDA€kD'
+let @w='A€kDA€kDA€kD'
 
 "------------------------
 "       OLD MACROS
@@ -225,6 +231,7 @@ nnoremap Q Ã§Ã§
 "set ignorecase or set ic To re-enable case sensitivity, use :set ic!
 
 "To set the default font used by GVim, add a command of the form set guifont= to your gvimrc. If you want to add it to vimrc file, then enclose this command in a if has("gui_running") block.
+
 
 
 "------------------------
