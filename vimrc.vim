@@ -82,15 +82,10 @@ noremap <leader>- :m--
 
 
 "Copy and paste options
-if has("win32")
-    noremap <leader>y "+yy
-    vnoremap <leader>y "+yy
-    nnoremap <leader>p "+p
-else
-    noremap <leader>y "*yy
-    vnoremap <leader>y "*yy
-    nnoremap <leader>p "*p
-endif
+noremap  <leader>y "+yy
+noremap <leader>p "+p
+vnoremap <leader>y "+yy
+vnoremap <leader>p "+p
 
 noremap <leader>a GVgg
 
