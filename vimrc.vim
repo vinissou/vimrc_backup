@@ -215,6 +215,19 @@ let @m='\=-vexxA€kD >>> €kDA€kb'
 let @n='/>\w\\--\=\=--A€kDA€kD'
 let @w='A€kDA€kDA€kD'
 
+
+"if has("win32")
+"    noremap <leader>y "+yy
+"    vnoremap <leader>y "+yy
+"    nnoremap <leader>p "+p
+"else
+"    noremap <leader>y "*yy
+"    vnoremap <leader>y "*yy
+"    nnoremap <leader>p "*p
+"endif
+
+
+
 "------------------------
 "       OLD MACROS
 "------------------------
