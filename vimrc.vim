@@ -83,7 +83,7 @@ noremap <leader>- :m--
 
 "Copy and paste options
 noremap  <leader>y "+yy
-noremap <leader>p "+p
+noremap  <leader>p "+p
 vnoremap <leader>y "+yy
 vnoremap <leader>p "+p
 
