@@ -177,7 +177,7 @@ endif
 "         unicode characters 
 
 let @i='GVgg<G' "unindent the whole document one position to the left
-let @t=':let time =strftime("%c")' "creates a current time variable
+let @t=':let time =strftime("%c"):put = time' "creates and print a time variable
 
 
 "Deactivated because they annoyed me
