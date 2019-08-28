@@ -181,17 +181,17 @@ let @t=':let time =strftime("%c"):put = time' "creates and print a time variab
 
 
 "Deactivated because they annoyed me
-nnoremap ., Ã§Ã§  
-nnoremap .. Ã§Ã§  
-nnoremap .e Ã§Ã§  
-nnoremap .x Ã§Ã§  
-nnoremap .v Ã§Ã§  
-nnoremap .b Ã§Ã§  
-nnoremap .z Ã§Ã§  
-nnoremap s Ã§Ã§  
-vnoremap s Ã§Ã§  
-nnoremap , Ã§Ã§
-nnoremap Q Ã§Ã§
+nnoremap ., çç  
+nnoremap .. çç  
+nnoremap .e çç  
+nnoremap .x çç  
+nnoremap .v çç  
+nnoremap .b çç  
+nnoremap .z çç  
+nnoremap  s çç 
+vnoremap  s çç 
+nnoremap  , çç
+nnoremap  Q çç
 
 
 "---------------------------
