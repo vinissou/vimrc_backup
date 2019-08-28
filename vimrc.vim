@@ -174,7 +174,7 @@ endif
 "MACROS 
 " Tips: - Don't use numbers
 "       - Saving macros in your file can lead to weird glitches in
-"         unicode characters 
+"         unicode characters in Windows???
 
 let @i='GVgg<G' "unindent the whole document one position to the left
 let @t=':let time =strftime("%c"):put = time' "creates and print a time variable
