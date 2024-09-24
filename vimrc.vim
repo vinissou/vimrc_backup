@@ -10,6 +10,7 @@ endif
 
 
 "Set everything in english, or at least try to
+set fileformat=unix
 set langmenu=en_US.UTF-8 
 let $LANG = 'en_US.UTF-8'
 language message en_US.UTF-8
@@ -58,14 +59,29 @@ set smartindent
 set splitbelow
 set splitright
 set tabstop=4
-set textwidth=80
+set textwidth=8000
 set wildmenu
 set wildmode=list:longest,full
-
+set nrformats-=octal
+set diffopt+=context:99999 "disable diff-fold
 
 
 "------------------------
-"   SHORTCUTS SECTION
+"   digraphs section
+"------------------------
+digraphs << 8592
+digraphs >> 8594
+digraphs AA 8593
+digraphs VV 8595
+
+inoremap <C-k6> <C-K>>> 
+inoremap <C-k4> <C-K><< 
+inoremap <C-k8> <C-K>AA 
+inoremap <C-k2> <C-K>VV 
+
+
+"------------------------
+"   shortcuts section
 "------------------------
 
 "Moving words and spaces
@@ -114,6 +130,8 @@ nnoremap ,i I
 
 
 "Vim functions
+
+nnoremap k i:
 nnoremap ; :
 nnoremap <leader>m :e! $MYVIMRC<cr>
 nnoremap .\ .
@@ -142,8 +160,6 @@ noremap ." IxxxAxx>
 nnoremap .i I/*
 nnoremap .f A*/
 nnoremap .l I* <<<
-nnoremap .h O/************************************************************ Name:** Function: ** Observations: ** Used functions and variables from other files:************************************************************/
-nnoremap .m o* Creator: VinÃ­cius Souza* Email: vinissou.git@gmail.com* Site: https://github.com/vinissou
 
 
 "Backups
@@ -178,6 +194,12 @@ endif
 
 let @i='GVgg<G' "unindent the whole document one position to the left
 let @t=':let time =strftime("%c"):put = time' "creates and print a time variable
+let @c='\ad\p\agu:w!:%!capitalize.exe %\a\y'
+"let @c=':%!capitalize.exe %'
+inoremap <F1>  <space><space><space><space>
+nnoremap <F1> ç
+inoremap <tab>  <c-n>
+
 
 
 "Deactivated because they annoyed me
@@ -188,10 +210,14 @@ nnoremap .x çç
 nnoremap .v çç  
 nnoremap .b çç  
 nnoremap .z çç  
-nnoremap  s çç 
+nnoremap  S çç 
 vnoremap  s çç 
 nnoremap  , çç
 nnoremap  Q çç
+nnoremap  <S-Down> çç
+nnoremap  <S-Up> çç
+vnoremap  <S-Down> çç
+vnoremap  <S-Up> çç
 
 
 "---------------------------
@@ -204,12 +230,12 @@ nnoremap  Q çç
 "------------------------
 "       TEMPORARY 
 "------------------------
-let @r='Iv/>h\y'  
-let @d='Av?>l\y'  
-let @m='\=-vexxA€kD >>> €kDA€kb'
-let @n='/>\w\\--\=\=--A€kDA€kD'
-let @w='A€kDA€kDA€kD'
-
+"let @r='Iv/>h\y'  
+"let @d='Av?>l\y'  
+"let @m='\=-vexxA€kD >>> €kDA€kb'
+"let @n='/>\w\\--\=\=--A€kDA€kD'
+"let @w='A€kDA€kDA€kD'
+"let @u='içúçóçáãõô'
 
 "if has("win32")
 "    noremap <leader>y "+yy
@@ -247,6 +273,13 @@ let @w='A€kDA€kDA€kD'
 
 "To set the default font used by GVim, add a command of the form set guifont= to your gvimrc. If you want to add it to vimrc file, then enclose this command in a if has("gui_running") block.
 
-
+"print command to the buffer
+":put =range(11,15)
+":windo set scrollbind
+"expadir
+" %s/ de / /ge |  %s/ do / /ge | %s/ da / /ge | %s/ dos / /ge | %s/ das / /ge  | %s/ dàs / /ge | %s/ à / /ge | %s/ às / /ge | %s/ aos / /ge  | %s/ para / /ge | %s/ aos / /ge | %s/ por / /ge | %s/ a / /ge | %s/ ou / /ge | %s/ em / /ge | %s/ na / /ge | %s/ no / /ge
 
 "------------------------
+
+
+
