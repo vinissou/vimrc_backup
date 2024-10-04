@@ -253,7 +253,7 @@ vnoremap  <S-Up> çç
 "------------------------
 "       OLD MACROS
 "------------------------
-"let @c='i#include <stdio.h>int main(){return(0);}'
+let @c='i#include <stdio.h>int main(){return(0);}'
 "let @k='|'
 "noremap .j :'<,'>!fmt -w 80
 
