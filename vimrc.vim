@@ -153,13 +153,13 @@ nnoremap <leader>sn :set nospell
 
 
 "Programming comments
-nnoremap <leader>' I"A"
-nnoremap <leader>" IxAx
-noremap .' I/* A*/
-noremap ." IxxxAxx>
-nnoremap .i I/*
-nnoremap .f A*/
-nnoremap .l I* <<<
+"nnoremap <leader>' I"A"
+"nnoremap <leader>" IxAx
+"noremap .' I/* A*/
+"noremap ." IxxxAxx>
+"nnoremap .i I/*
+"nnoremap .f A*/
+"nnoremap .l I* <<<
 
 
 "Backups
@@ -179,6 +179,7 @@ if has("win32")
     nnoremap .c :<C-U>!clang -o3 -Wall -pedantic -std=c99 % -o CL_OUT.exe <CR>
     nnoremap .cl :<C-U>!cl /O2 /TC /Wall /analyze % <CR>
     nnoremap .gc :<C-U>!gcc  -o3 -Wall -pedantic -std=c99 % -o GCC_OUT.exe<CR>
+    nnoremap .f :%!clang-format.exe  --style="{BasedOnStyle: llvm, IndentWidth: 4}" %<CR>
 else
     nnoremap .c :<C-U>!clang -o3 -Wall -pedantic -std=c99 %:r.c -o ~/a.out<CR>
     nnoremap .gc :<C-U>!gcc  -o3 -Wall -pedantic -std=c99 % -o ~/a.out<CR>
