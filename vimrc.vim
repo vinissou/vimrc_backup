@@ -88,7 +88,9 @@ inoremap <C-k2> <C-K>VV
 noremap <leader>o o
 noremap <leader>0 O
 noremap <leader><Space> i 
-noremap <leader> i
+noremap <leader>
+ i
+
 
 noremap > >>
 noremap < <<
@@ -131,7 +133,7 @@ nnoremap ,i I
 
 "Vim functions
 
-nnoremap k i:
+"nnoremap k i:
 nnoremap ; :
 nnoremap <leader>m :e! $MYVIMRC<cr>
 nnoremap .\ .
@@ -147,30 +149,44 @@ nnoremap <leader>1 @k
 nnoremap <leader>2 <c-w>=
 nnoremap <leader>3 <c-w>_
 
-nnoremap <leader>se :setlocal spell spelllang=en_us
-nnoremap <leader>sb :setlocal spell spelllang=pt_br
-nnoremap <leader>sn :set nospell
+nnoremap <leader>se :setlocal spell spelllang=en_us
+
+nnoremap <leader>sb :setlocal spell spelllang=pt_br
+
+nnoremap <leader>sn :set nospell
+
 
 
 "Programming comments
 "nnoremap <leader>' I"A"
 "nnoremap <leader>" IxAx
-"noremap .' I/* A*/
-"noremap ." IxxxAxx>
-"nnoremap .i I/*
-"nnoremap .f A*/
-"nnoremap .l I* <<<
+"noremap .' I/* A*/
+
+"noremap ." IxxxAxx>
+
+"nnoremap .i I/*
+
+"nnoremap .f A*/
+
+"nnoremap .l I* <<<
+
 
 
 "Backups
 if has("win32")
     nnoremap <leader>bc :! C:\C\SCRIPTS\backupWIN.bat<cr>
-    let @b='\m:w! C:\Users\vini\Documents\backups\vim\STABLE_VIMRC.vim|:! C:\C\SCRIPTS\VIMbackup.bat'
-    let @g=':! C:\C\SCRIPTS\GIT_PULL_vimrc.bat|\m\ad:r C:\Users\vini\Source\Repos\vimrc_backup\vimrc.vim'
+    let @b='\m:w! C:\Users\vini\Documents\backups\vim\STABLE_VIMRC.vim|:! C:\C\SCRIPTS\VIMbackup.bat
+'
+    let @g=':! C:\C\SCRIPTS\GIT_PULL_vimrc.bat
+|\m\ad:r C:\Users\vini\Source\Repos\vimrc_backup\vimrc.vim
+'
 else
     nnoremap <leader>bc :!bash /home/vini/C/SCRIPTS/backup.sh<cr>
-    let @b='\m:w! /home/vini/backups/VIM/STABLE_VIMRC.vim|:!sh /home/vini/C/SCRIPTS/VIMbackup.sh'
-    let @g=':!sh /home/vini/C/SCRIPTS/GIT_PULL_vimrc.sh|\m\ad:r /home/vini/GIT/vimrc_backup/vimrc.vim'
+    let @b='\m:w! /home/vini/backups/VIM/STABLE_VIMRC.vim|:!sh /home/vini/C/SCRIPTS/VIMbackup.sh
+'
+    let @g=':!sh /home/vini/C/SCRIPTS/GIT_PULL_vimrc.sh
+|\m\ad:r /home/vini/GIT/vimrc_backup/vimrc.vim
+'
 endif
 
 
@@ -194,49 +210,60 @@ endif
 "         unicode characters in Windows???
 
 let @i='GVgg<G' "unindent the whole document one position to the left
-let @t=':let time =strftime("%c"):put = time' "creates and print a time variable
-let @c='\ad\p\agu:w!:%!capitalize.exe %\a\y'
-"let @c=':%!capitalize.exe %'
+let @t=':let time =strftime("%c")
+:put = time
+' "creates and print a time variable
+let @c='\ad\p\agu:w!
+:%!capitalize.exe %
+\a\y'
+"let @c=':%!capitalize.exe %
+'
 inoremap <F1>  <space><space><space><space>
-nnoremap <F1> ç
+nnoremap <F1> Ã§
 inoremap <tab>  <c-n>
 
 
 
 "Deactivated because they annoyed me
-nnoremap ., çç  
-nnoremap .. çç  
-nnoremap .e çç  
-nnoremap .x çç  
-nnoremap .v çç  
-nnoremap .b çç  
-nnoremap .z çç  
-nnoremap  S çç 
-vnoremap  s çç 
-nnoremap  , çç
-nnoremap  Q çç
-nnoremap  <S-Down> çç
-nnoremap  <S-Up> çç
-vnoremap  <S-Down> çç
-vnoremap  <S-Up> çç
+nnoremap ., Ã§Ã§  
+nnoremap .. Ã§Ã§  
+nnoremap .e Ã§Ã§  
+nnoremap .x Ã§Ã§  
+nnoremap .v Ã§Ã§  
+nnoremap .b Ã§Ã§  
+nnoremap .z Ã§Ã§  
+nnoremap  S Ã§Ã§ 
+vnoremap  s Ã§Ã§ 
+nnoremap  , Ã§Ã§
+nnoremap  Q Ã§Ã§
+nnoremap  <S-Down> Ã§Ã§
+nnoremap  <S-Up> Ã§Ã§
+vnoremap  <S-Down> Ã§Ã§
+vnoremap  <S-Up> Ã§Ã§
 
 
 "---------------------------
 "  COMMAND CODE REFERENCES 
 "---------------------------
 "Esc = 
-"Enter = 
+"Enter = 
+
 
 
 "------------------------
 "       TEMPORARY 
 "------------------------
-"let @r='Iv/>h\y'  
-"let @d='Av?>l\y'  
-"let @m='\=-vexxA€kD >>> €kDA€kb'
-"let @n='/>\w\\--\=\=--A€kDA€kD'
-"let @w='A€kDA€kDA€kD'
-"let @u='içúçóçáãõô'
+"let @r='Iv/>
+h\y'  
+"let @d='Av?>
+l\y'  
+"let @m='\=-vexxAâ‚¬kD >>> â‚¬kDAâ‚¬kb'
+"let @n='/>
+\
+w\
+\--\=\=--Aâ‚¬kDAâ‚¬kD'
+"let @w='Aâ‚¬kDAâ‚¬kDAâ‚¬kD'
+"let @u='iÃ§ÃºÃ§Ã³Ã§Ã¡Ã£ÃµÃ´'
 
 "if has("win32")
 "    noremap <leader>y "+yy
@@ -253,7 +280,12 @@ vnoremap  <S-Up> çç
 "------------------------
 "       OLD MACROS
 "------------------------
-let @c='i#include <stdio.h>int main(){return(0);}'
+let @c='i#include <stdio.h>
+
+int main()
+{
+return(0);
+}'
 "let @k='|'
 "noremap .j :'<,'>!fmt -w 80
 
@@ -278,7 +310,7 @@ let @c='i#include <stdio.h>int main(){return(0);}'
 ":put =range(11,15)
 ":windo set scrollbind
 "expadir
-" %s/ de / /ge |  %s/ do / /ge | %s/ da / /ge | %s/ dos / /ge | %s/ das / /ge  | %s/ dàs / /ge | %s/ à / /ge | %s/ às / /ge | %s/ aos / /ge  | %s/ para / /ge | %s/ aos / /ge | %s/ por / /ge | %s/ a / /ge | %s/ ou / /ge | %s/ em / /ge | %s/ na / /ge | %s/ no / /ge
+" %s/ de / /ge |  %s/ do / /ge | %s/ da / /ge | %s/ dos / /ge | %s/ das / /ge  | %s/ dÃ s / /ge | %s/ Ã  / /ge | %s/ Ã s / /ge | %s/ aos / /ge  | %s/ para / /ge | %s/ aos / /ge | %s/ por / /ge | %s/ a / /ge | %s/ ou / /ge | %s/ em / /ge | %s/ na / /ge | %s/ no / /ge
 
 "------------------------
 
